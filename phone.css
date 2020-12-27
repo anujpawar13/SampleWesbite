@@ -1,0 +1,81 @@
+/* Navigation */
+#navbar{
+    flex-direction: column;
+}
+
+#navbar ul li a{
+    font-size: 0.8rem;
+    padding: 10px 10px;
+}
+
+/* Home Section */
+
+#home{
+    height: 560px;
+}
+
+#home::before{
+    height: 680px;
+}
+
+#home p{
+   font-size: 1.3rem;
+}
+/* Courses Section */
+
+#courses{
+    flex-direction: column;  /* all the course boxes will appear under the prev box */
+}
+
+/* Partners Section */
+
+/* option1 */
+/* #partner{
+    overflow: hidden;  
+    It will not shrink, instead will show only that is visible
+
+    flex-direction: column;
+    height: 420px;
+} */
+
+/* option2 */
+#partner{
+    flex-wrap: wrap;
+}
+
+#partner-section::before{
+    height: 600px;
+}
+
+/* #partner img{
+    /* width: 60px;
+    height: 60px; */  /* not specifying the height & width of imgs, otherwise they look stretched */
+
+
+/* Contact Section */
+
+#contact-box form{
+    font-size: 20px;
+    width: 80%;
+}
+
+#contact-box input, #contact-box textarea{
+    font-size: 20px;
+    width: 90%;
+}
+
+/* Footer */
+
+footer{
+    font-size: 10px;
+}
+
+/* Utility Classes */
+
+.h-primary{
+    font-size: 2.5rem;
+}
+
+.btn{
+    font-size: 1.5rem;
+}

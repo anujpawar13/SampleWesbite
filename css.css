@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+html{
+    scroll-behavior: smooth;  /* for smooth scrolling */
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* CSS VARIABLES (if needed) */
+/* :root{
+    
+} */
+
+/* Navigation Bar */
+
+#navbar{
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    align-items: center;   
+    position: relative;  /* sticky, if you want navbar to remain on top, even when scrolled down */
+    top: 0px;
+}
+#navbar::before{   /* Psuedo Selector */
+    content: "";  /* otherwise bg-color will not appear */
+    background-color: black; /* (not setting this up because we dont want black bg-color*/ 
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* Navigation Bar: Logo and Image */
+
+#logo{
+    margin: 0px 12px;
+}
+
+#logo img{
+    margin: 4px 14px;
+    height: 80px;
+}
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    
+}
+#navbar ul li{
+    list-style: none; /* Removes the dots in lists */
+    font-size: 1.2rem;
+}
+#navbar ul li a{
+    color: white;
+    display: block; /* By default it is inline */
+    padding: 3px 10px;
+    text-decoration: none;
+    border-radius: 25px;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white
+}
+
+/* Home Section */
+
+#home{
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    flex-direction: column; /* shifts the content to bottom of previous content */
+    align-items: center;
+    justify-content: center;
+    padding: 10px 4px;
+    height: 610px
+}
+#home::before{ /* Using psuedo selector for background */
+    content: "";
+    background: url('/img/bg.jpg') no-repeat center center;
+    position: absolute;
+    height: 721px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -2;
+    opacity: 0.9;
+}
+
+#home h1{
+    color: white ;
+    text-align: center;
+}
+#home p{
+    color: white ;
+    text-align: center;
+    font: 1.5rem;
+}
+
+/* Services Section */
+
+#courses{
+    font-family: 'Rubik', sans-serif;
+    margin: 30px;
+    display: flex;
+}
+#courses .box{
+    border: 5px solid navy;
+    padding: 30px;
+    margin: 13px 6px;
+    border-radius: 25px;
+}
+#courses .box img{
+    height: 200px;
+
+    margin: auto;
+    display: block;  /* These two properties are to allign the image in the center of the box */
+}
+
+/* Partners Section */
+
+/*#partner-section{
+    /* height: 222px; */  /* removing specified height of grey background because in phone.css the images will have the grey bakchground when the screen is small (it will adjust on its own) */ 
+
+
+
+#partner-section::before{ /* Using psuedo selector for background */
+    content: "";
+    background-color: #ededed;
+    position: absolute;
+    height: 35%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+#partner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-item{
+    padding: 24px 25px;
+}
+
+#partner .item2 img{   /* This is to resize msft logo individually */
+    height: 45px;
+}  
+
+#partner img{  /* controls all the images in partners */
+    height: 60px;
+    
+}
+
+/* Contact Section */
+
+#contact{
+    position: relative;
+
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: rgb(226, 221, 179);
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 22px;
+}
+
+#contact-box form{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#contact-box input, #contact-box textarea{
+    padding: 4px 15px;
+    width: 100%;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+/* Footer */
+
+footer{
+    background-color: black;
+    color: white;
+}
+
+/* Utility Classes (for same type of headings, paragraphs etc.) */
+
+.h-primary{
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5rem;
+    padding: 22px;
+}
+.h-secondary{
+    font-size: 1.2rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 15px;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    margin: 22px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+
+.center{  /* To center items, whenever this class is used */
+    text-align: center;
+    padding: 15px 2px;
+}
