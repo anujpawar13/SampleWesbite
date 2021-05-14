@@ -115,7 +115,8 @@ html{
     height: 200px;
 
     margin: auto;
-    display: block;  /* These two properties are to allign the image in the center of the box */
+    display: block;  
+    /* These two properties are to allign the image in the center of the box */
 }
 
 /* Partners Section */
